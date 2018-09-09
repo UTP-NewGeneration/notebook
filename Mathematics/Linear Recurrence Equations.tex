@@ -1,0 +1,37 @@
+$$ f(n) = af(n - 1) + bf(n - 2) + c f(n - 3); n \geq 3 $$
+
+$$\begin{vmatrix}
+f(n) \\ 
+f(n - 1) \\ 
+f(n - 2)
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b & c \\
+1 & 0 & 0 \\ 
+0 & 1 & 0
+\end{vmatrix}
+*
+\begin{vmatrix}
+f(n - 1)\\ 
+f(n - 2)\\ 
+f(n - 3)
+\end{vmatrix}$$
+
+$$\begin{vmatrix}
+f(n) \\ 
+f(n - 1) \\ 
+f(n - 2)
+\end{vmatrix}
+=
+\begin{vmatrix}
+a & b & c \\
+1 & 0 & 0 \\ 
+0 & 1 & 0
+\end{vmatrix} ^ {n - 2}
+*
+\begin{vmatrix}
+f(2)\\ 
+f(1)\\ 
+f(0)
+\end{vmatrix}$$
