@@ -61,7 +61,7 @@ struct SuffixArray {
 vi stringMatching(string T, string P) {
 	int n = T.size(), m = P.size(), start, end;
 	SuffixArray sa(T);
-	int lo = 0, hi = n;
+	int lo = -1, hi = n;
 	while (hi - lo > 1) {
 		int mid = (hi + lo) / 2;
 		if (P > T.substr(sa.SA[mid], m))

@@ -25,6 +25,7 @@ void scc(int u) {
 }
 
 int main() {
+	cnt = 0, nComps = 0;
 	memset(num, -1, sizeof num);
 	fori(i, 0, n) if (num[i] == -1)
 		scc(i);

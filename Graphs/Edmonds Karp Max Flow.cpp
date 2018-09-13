@@ -1,4 +1,5 @@
-int n, res[mxn][mxn], p[mxn], f, s, t;
+// O(n * m^2) = O(n^3 * m)
+int n, res[MN][MN], p[MN], f, s, t;
 
 void augment(int v, int minEdge) {
 	if (v == s) { f = minEdge; return; }
@@ -12,8 +13,7 @@ int maxFlow() {
 	int mf = 0;
 	while (true) {
 		f = 0;
-		
-		vi dist(mxn, oo); dist[s] = 0;
+		vi dist(MN, oo); dist[s] = 0;
 		queue<int> q; q.push(s);
 		memset(p, -1, sizeof p);
 		while (!q.empty()) {
@@ -33,3 +33,7 @@ int maxFlow() {
 	}
 	return mf;
 }
+
+// Vertex capacities
+int in(int x) { return 2 * x; }
+int out(int x) { return 2 * x + 1; }

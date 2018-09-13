@@ -1,4 +1,4 @@
-void kmp(string T, string P) {
+void kmp(string &T, string &P) {
 	int n = T.size(), m = P.size();
 	vector<int> b(m + 1); b[0] = -1;
 	// Preprocess P
